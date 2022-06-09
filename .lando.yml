@@ -1,0 +1,22 @@
+name: demo
+recipe: wordpress
+config:
+  php: '7.4'
+  via: nginx
+  webroot: /
+  database: mariadb
+  composer_version: '1.10.1'
+
+services:
+  nodejs: 
+    type: node:14
+
+tooling:
+  node:
+    service: nodejs
+
+  npm: 
+    service: nodejs
+
+  yarn:
+    service: nodejs
